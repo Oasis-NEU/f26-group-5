@@ -6,7 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1C7D8DF2307ED8780076A2A1 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */; };
+		1C7D8DF5307ED95F0076A2A1 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7D8DF4307ED95F0076A2A1 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		24F88D03307ECF8A00B8CFE3 /* FoodBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -23,16 +29,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7D8DF5307ED95F0076A2A1 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7D8DF3307ED95F0076A2A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24F88CFA307ECF8A00B8CFE3 = {
 			isa = PBXGroup;
 			children = (
+				1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */,
 				24F88D05307ECF8A00B8CFE3 /* FoodBuddy */,
+				1C7D8DF3307ED95F0076A2A1 /* Frameworks */,
 				24F88D04307ECF8A00B8CFE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +81,7 @@
 			);
 			name = FoodBuddy;
 			packageProductDependencies = (
+				1C7D8DF4307ED95F0076A2A1 /* Supabase */,
 			);
 			productName = FoodBuddy;
 			productReference = 24F88D03307ECF8A00B8CFE3 /* FoodBuddy.app */;
@@ -94,6 +111,9 @@
 			);
 			mainGroup = 24F88CFA307ECF8A00B8CFE3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C7D8DF0307ED7CF0076A2A1 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 24F88D04307ECF8A00B8CFE3 /* Products */;
 			projectDirPath = "";
@@ -119,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7D8DF2307ED8780076A2A1 /* SupabaseClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C7D8DF0307ED7CF0076A2A1 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C7D8DF4307ED95F0076A2A1 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C7D8DF0307ED7CF0076A2A1 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24F88CFB307ECF8A00B8CFE3 /* Project object */;
 }
