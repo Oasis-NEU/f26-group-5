@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C7D8DF2307ED8780076A2A1 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */; };
 		1C7D8DF5307ED95F0076A2A1 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7D8DF4307ED95F0076A2A1 /* Supabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		24F88D03307ECF8A00B8CFE3 /* FoodBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,7 +44,6 @@
 		24F88CFA307ECF8A00B8CFE3 = {
 			isa = PBXGroup;
 			children = (
-				1C7D8DF1307ED8780076A2A1 /* SupabaseClient.swift */,
 				24F88D05307ECF8A00B8CFE3 /* FoodBuddy */,
 				1C7D8DF3307ED95F0076A2A1 /* Frameworks */,
 				24F88D04307ECF8A00B8CFE3 /* Products */,
@@ -139,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C7D8DF2307ED8780076A2A1 /* SupabaseClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
 //  Created by James . on 10/13/26.
 //
 
-enum Interest {
+enum Interest: Codable {
     case movies
     
     case engineering
