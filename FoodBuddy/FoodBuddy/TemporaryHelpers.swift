@@ -7,6 +7,17 @@
 import Foundation
 import Supabase
 
+private struct MeetingRow: Encodable {
+    let id: UUID
+    let date: Date
+    let location: DiningLocation
+}
+
+private struct ParticipantRow: Encodable {
+    let meeting_id: UUID
+    let user_id: UUID
+}
+
 struct TH {
     static func addUser(name: String, email: String, year: Int, gender: String, interests: [Interest]) async {
         let user = User(id: UUID(), name: name, email: email, year: year, gender: gender, interests: interests)
@@ -23,15 +34,22 @@ struct TH {
         }
     }
     
-    static func addMeeting(date: Date, location: Location, users: [User]) async {
-        let meeting = Meeting(id: UUID(), date: date, location: location, users: users)
-        
+    static func addMeeting(date: Date, location: DiningLocation, users: [User]) async {
+        let meetingId = UUID()
+
         do {
             try await supabase
                 .from("meetings")
-                .insert(meeting)
+                .insert(MeetingRow(id: meetingId, date: date, location: location))
                 .execute()
-                
+
+            if !users.isEmpty {
+                try await supabase
+                    .from("meeting_participants")
+                    .insert(users.map { ParticipantRow(meeting_id: meetingId, user_id: $0.id) })
+                    .execute()
+            }
+
             print("Successfully added meeting")
         } catch {
             print("Error inserting meeting: \(error)")

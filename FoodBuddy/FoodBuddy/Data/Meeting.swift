@@ -10,6 +10,6 @@ struct Meeting: Codable, Identifiable {
     var id: UUID
     
     var date: Date
-    var location: Location
+    var location: DiningLocation
     var users: [User]
 }
