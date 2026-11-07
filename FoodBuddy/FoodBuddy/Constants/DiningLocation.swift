@@ -10,3 +10,5 @@ enum DiningLocation: String, Codable {
     case international_village
     case belvidere
 }
+
+

@@ -1,0 +1,27 @@
+Sign in/sign up page
+
+Auth NU email
+- create account
+- check account existence
+- check account credentials
+- password enforcement
+
+Home view
+- get recommended events
+- create an event?
+- 
+
+Calendar view
+- get all events
+
+Event view
+- get members
+- register button
+- check if currently registered
+- unregister
+
+
+Questions to consider
+- Do we want in-app messaging? i think theres something to be said about being more likely to be friends/stay in contact with someone if you get that extra form of communication whether it be insta/snap/text whatever. more than just texting on a food mating app. also i dont know how to implement messaging but its probably not that bad
+
+
