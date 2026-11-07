@@ -7,7 +7,7 @@
 import Supabase
 import Foundation
 
-class EventManager {
+class MeetingManager {
     init(client: SupabaseClient) {
         self.client = client
     }

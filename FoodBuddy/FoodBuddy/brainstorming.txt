@@ -8,13 +8,13 @@ Auth NU email
 
 Home view
 - get recommended events
-- create an event?
-- 
+- create an meeting?
+-
 
 Calendar view
-- get all events
+- get all meetings
 
-Event view
+Meeting view
 - get members
 - register button
 - check if currently registered
