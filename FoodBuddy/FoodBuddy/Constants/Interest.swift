@@ -7,12 +7,13 @@
 
 enum Interest: String, Codable {
     case movies
-    
     case engineering
     case english
-    
     case basketball
     case football
     case baseball
     case soccer
+    case reading
+    case politics
+    case robotics
 }
