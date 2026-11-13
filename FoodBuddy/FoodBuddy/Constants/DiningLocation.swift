@@ -6,9 +6,9 @@
 //
 
 enum DiningLocation: String, Codable {
-    case stetson_east
-    case international_village
-    case belvidere
+    case stetson_east = "Stetson East"
+    case international_village = "International Village"
+    case belvidere = "Belvidere"
 }
 
 

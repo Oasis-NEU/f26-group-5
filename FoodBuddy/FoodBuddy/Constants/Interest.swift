@@ -6,13 +6,13 @@
 //
 
 enum Interest: String, Codable {
-    case movies
+    case movies = "Movies"
     
-    case engineering
-    case english
+    case engineering = "Engineering"
+    case english = "English"
     
-    case basketball
-    case football
-    case baseball
-    case soccer
+    case basketball = "Basketball"
+    case football = "Football"
+    case baseball = "Baseball"
+    case soccer = "Soccer"
 }

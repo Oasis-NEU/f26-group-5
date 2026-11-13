@@ -19,12 +19,8 @@ struct ContentView: View {
         VStack {
             
         }.task {
-            do {
-                try await auth.signUp(email: "test5@northeastern.edu", password: "password123")
-                print("signed up, state:", auth.state)
-            } catch {
-                print("sign up failed:", error)
-            }
+            
         }
     }
 }
+
