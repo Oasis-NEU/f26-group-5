@@ -32,13 +32,15 @@ struct HomeView: View {
     
     var availableToday: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            
+            ForEach(getNotMyMeetings(), id: \.self) { meeting in
+                MeetingBlockCardView(meeting: meeting, manager: manager)
+            }
         }
     }
     
     // MARK: Helpers
     
-    func getMyMeetings() -> [Meeting] {
+    func getMyMeetings() -> [Meeting] { // return all meetings this user is in
         var mine: [Meeting] = []
         for meeting in manager.meetings {
             if manager.isRegistered(for: meeting) {
@@ -46,5 +48,15 @@ struct HomeView: View {
             }
         }
         return mine
+    }
+    
+    func getNotMyMeetings() -> [Meeting] { // return all meetings this user is not in
+        var notMine: [Meeting] = []
+        for meeting in manager.meetings {
+            if !manager.isRegistered(for: meeting) {
+                notMine.append(meeting)
+            }
+        }
+        return notMine
     }
 }
